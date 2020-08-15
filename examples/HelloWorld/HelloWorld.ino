@@ -22,11 +22,11 @@
 #include <DogLcd.h>
 
 // initialize the library with the numbers of the interface pins
-DogLcd lcd(2, 3, 4, 5);
+DogLcd lcd(11, 13, 12, 10); // MOSI, CLK, RS, CS
 
 void setup() {
   // set up the LCD type and the contrast setting for the display 
-  lcd.begin(DOG_LCD_M162);
+  lcd.begin(DOG_LCD_M163);
   // Print a message to the LCD.
   lcd.print("hello, world!");
 }
@@ -38,5 +38,3 @@ void loop() {
   // print the number of seconds since reset:
   lcd.print(millis()/1000);
 }
-
-
